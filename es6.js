@@ -362,46 +362,97 @@
 
 //ES6
 
-class Person6 {
-    constructor(name, yearOfBirth, job) {
-        this.name = name
-        this.yearOfBirth = yearOfBirth
-        this.job = job
-    }
+//class Person6 {
+//     constructor(name, yearOfBirth, job) {
+//         this.name = name
+//         this.yearOfBirth = yearOfBirth
+//         this.job = job
+//     }
 
-    calculateAge() {
-    let age = new Date().getFullYear() - this.yearOfBirth
-    console.log(age)
-    }
+//     calculateAge() {
+//     let age = new Date().getFullYear() - this.yearOfBirth
+//     console.log(age)
+//     }
 
-    //making static function
-    static greeting() {
-        console.log('Hey there')
-    }
-}
+//     //making static function
+//     static greeting() {
+//         console.log('Hey there')
+//     }
+// }
 
-var john6 = new Person6('John', 1990 , 'teacher')
-Person6.greeting()
+// var john6 = new Person6('John', 1990 , 'teacher')
+// Person6.greeting()
+
+//SUBCLASSES
+
+//ES5
+// var Person5 = function(name, yearOfBirth, job) {
+//     this.name = name
+//     this.yearOfBirth = yearOfBirth
+//     this.job = job
+// }
+// Person5.prototype.calculateAge = function() {
+//     var age = new Date().getFullYear() - this.yearOfBirth
+//     console.log(age)
+// }
+
+// var athlete = function(name, yearOfBirth, job, olympicGames, medals) {
+//     Person5.call(this, name, yearOfBirth, job)
+//     this.name = name
+//     this.yearOfBirth = yearOfBirth
+//     this.job = job
+//     this.olympicGames = olympicGames
+//     this.medals = medals
+// }
+// //to manually set the prototype
+// athlete.prototype = Object.create(Person5.prototype)
+// athlete.prototype.wonMedal = function() {
+//     this.medals++
+//     console.log(this.medals)
+// }
 
 
 
+// var john = new athlete('John', 1990, 'Swimmer', 3, 4) 
+// john.calculateAge()
+// john.wonMedal()
+
+//ES6
+
+// class Person6 {
+//     constructor(name, yearOfBirth, job) {
+//         this.name = name
+//         this.yearOfBirth = yearOfBirth
+//         this.job = job
+//     }
+
+//     calculateAge() {
+//     let age = new Date().getFullYear() - this.yearOfBirth
+//     console.log(age)
+//     }
+
+//     //making static function
+//     static greeting() {
+//         console.log('Hey there')
+//     }
+// }
+
+// class Athlete extends Person6 {
+//     constructor(name, yearOfBirth, job, olympicGames, medals){
+//         super(name, yearOfBirth, job)
+//         this.olympicGames = olympicGames
+//         this.medals = medals
+//     }
+//     wonMedal() {
+//         this.medals++
+//         console.log(this.medals)
+//     }
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let john = new Athlete('John', 1990, 'Swimmer', 3, 10)
+// john.wonMedal()
+// john.calculateAge()
 
 
 
