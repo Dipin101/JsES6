@@ -454,60 +454,60 @@
 // john.wonMedal()
 // john.calculateAge()
 
-class Town {
-    constructor(name, buildYear) {
-        this.name = name
-        this.buildYear = buildYear
-    }
-}
+// class Town {
+//     constructor(name, buildYear) {
+//         this.name = name
+//         this.buildYear = buildYear
+//     }
+// }
 
-class Park extends Town {    
-    constructor(name, buildYear, area, trees){
-        super(name, buildYear)
-        this.trees = trees
-        this.area = area
-    }
-    //tree denity = trees/parkarea
-    density() {
-        let density = this.trees/this.area
-        console.log(`${this.name} has tree density of ${density} trees per square km`)
-    } 
-    //average = sum of all ages/number of parks
+// class Park extends Town {    
+//     constructor(name, buildYear, area, trees){
+//         super(name, buildYear)
+//         this.trees = trees
+//         this.area = area
+//     }
+//     //tree denity = trees/parkarea
+//     density() {
+//         let density = this.trees/this.area
+//         console.log(`${this.name} has tree density of ${density} trees per square km`)
+//     } 
+//     //average = sum of all ages/number of parks
    
-}
+// }
 
-class Street extends Town {
-    constructor(name, buildYear, length, size=3){
-        super(name, buildYear)
-        this.length = length
-        this.size = size
-    }
+// class Street extends Town {
+//     constructor(name, buildYear, length, size=3){
+//         super(name, buildYear)
+//         this.length = length
+//         this.size = size
+//     }
 
-    classifyStreet() {
-        const classification = new Map()
-        classification.set(1, 'tiny')
-        classification.set(2, 'small')
-        classification.set(3, 'normal')
-        classification.set(4, 'large')
-        classification.set(5, 'huge')
-        console.log(`${this.name}, build in ${this.buildYear}, is a ${classification.get(this.size)} street`)
-    }
-}
+//     classifyStreet() {
+//         const classification = new Map()
+//         classification.set(1, 'tiny')
+//         classification.set(2, 'small')
+//         classification.set(3, 'normal')
+//         classification.set(4, 'large')
+//         classification.set(5, 'huge')
+//         console.log(`${this.name}, build in ${this.buildYear}, is a ${classification.get(this.size)} street`)
+//     }
+// }
 
-const allParks = [new Park('Green Park', 1987, 0.2, 215),
-                 new Park('National Park', 1894, 2.9, 3541),
-                 new Park('Oak Park', 1953, 0.4, 949)];
+// const allParks = [new Park('Green Park', 1987, 0.2, 215),
+//                  new Park('National Park', 1894, 2.9, 3541),
+//                  new Park('Oak Park', 1953, 0.4, 949)];
 
-const allStreets = [new Street('Ocean Avenue', 1999, 1.1, 4),
-                   new Street('Evergreen Street', 2008, 2.7, 2),
-                   new Street('4th Street', 2015, 0.8),
-                   new Street('Sunset Boulevard', 1982, 2.5, 5)];
+// const allStreets = [new Street('Ocean Avenue', 1999, 1.1, 4),
+//                    new Street('Evergreen Street', 2008, 2.7, 2),
+//                    new Street('4th Street', 2015, 0.8),
+//                    new Street('Sunset Boulevard', 1982, 2.5, 5)];
 
 
-function calcAverage(arr) {
-    let sum = arr.reduce((el,sum) => sum += el) 
-    return [sum, sum/arr.length]  
-}
+// function calcAverage(arr) {
+//     let sum = arr.reduce((el,sum) => sum += el) 
+//     return [sum, sum/arr.length]  
+// }
 
 
 
