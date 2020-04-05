@@ -130,60 +130,72 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //AJAX and API
-function getWeather(woeid){
+// function getWeather(woeid){
 
-    fetch(`https://www.metaweather.com/api/location/${woeid}/`).then(result => {
-        //console.log(result)
-        return result.json()
-    }).then(data => {
-        //console.log(data)
-        const today = data.consolidated_weather[0]
-        console.log(`Temperature today in ${data.title} stay between ${today.min_temp} and ${ today.max_temp}`)
-    })
-    .catch(error => {
-        console.log(error)
-    })
+//     fetch(`https://www.metaweather.com/api/location/${woeid}/`).then(result => {
+//         //console.log(result)
+//         return result.json()
+//     }).then(data => {
+//         //console.log(data)
+//         const today = data.consolidated_weather[0]
+//         console.log(`Temperature today in ${data.title} stay between ${today.min_temp} and ${ today.max_temp}`)
+//     })
+//     .catch(error => {
+//         console.log(error)
+//     })
 
-}
+// }
 
-getWeather(2487956)
-getWeather(44418)
-
-
-async function getWeatherAW(woeid) {
-
-    try{
-        const result = await fetch(`https://www.metaweather.com/api/location/${woeid}/`)
-        const data = await result.json()
-        //console.log(data)
-        const tomorrow = data.consolidated_weather[1]
-        console.log(`Temperature tomorrow in ${data.title} stay between ${tomorrow.min_temp} and ${ tomorrow.max_temp}`)
-
-        return data
-    }
-    catch(error){
-        console.log(error)
-    }
-}
-
-getWeatherAW(2487956)
-let dataLondon 
-getWeatherAW(44418).then(data => {
-    dataLondon = data
-    console.log(dataLondon)
-})
+// getWeather(2487956)
+// getWeather(44418)
 
 
+// async function getWeatherAW(woeid) {
+
+//     try{
+//         const result = await fetch(`https://www.metaweather.com/api/location/${woeid}/`)
+//         const data = await result.json()
+//         //console.log(data)
+//         const tomorrow = data.consolidated_weather[1]
+//         console.log(`Temperature tomorrow in ${data.title} stay between ${tomorrow.min_temp} and ${ tomorrow.max_temp}`)
+
+//         return data
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+
+// getWeatherAW(2487956)
+// let dataLondon 
+// getWeatherAW(44418).then(data => {
+//     dataLondon = data
+//     console.log(dataLondon)
+// })
 
 
+//Bitwise operators
+// let n = 449
+// let k = 8
+// let a = 0
+// for(let i=1; i<n; i++) {  //i={}
+//     for(let j=i+1;j<=n;j++){   //i=1  j={1,2,3,4,5}
+//             if((i&j) < k && (i&j) > a){
+//                 a = (i&j)
+//             }
+//     }
+// }
+
+// console.log(a)
 
 
-
-
-
-
-
-
+// let count = 0
+// let button = document.getElementById('btn')
+// button.textContent = count
+// button.addEventListener('click',() => {
+//     count++
+//     document.getElementById('btn').textContent = count
+// })
 
 
 
